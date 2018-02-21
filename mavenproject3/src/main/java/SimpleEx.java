@@ -16,7 +16,7 @@ public class SimpleEx {
         JPanel panel = new JPanel();
         panel.setBackground(Color.red);
         panel.setLayout(null);
-        panel.setBounds(0, 0, 100, 100);
+        panel.setBounds(0, 0, 100, 101);
         window.add(panel);
 
         JButton[] buttons = new JButton[4];
