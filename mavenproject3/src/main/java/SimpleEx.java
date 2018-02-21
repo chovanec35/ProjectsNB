@@ -1,7 +1,5 @@
 
 import java.awt.Color;
-import java.awt.List;
-import java.util.ArrayList;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -21,24 +19,19 @@ public class SimpleEx {
         panel.setBounds(0, 0, 100, 100);
         window.add(panel);
 
-        ArrayList<JButton> buttons = new ArrayList();
-        String[] name = {"<",">","v", "^"};
+        JButton[] buttons = new JButton[4];
+        String[] names = {"^", "v", "<", ">"};
+        for (int i = 0; i < buttons.length; i++) {
+            buttons[i] = new JButton(names[i]);
+            System.out.println(buttons[i].getText());
+            panel.add(buttons[i]);
+        }
 
-        JButton button1 = new JButton("^");
-        button1.setBounds(50, 0, 50, 50);
-        panel.add(button1);
+        buttons[0].setBounds(50, 0, 50, 50);
+        buttons[1].setBounds(50, 100, 50, 50);
+        buttons[2].setBounds(0, 50, 50, 50);
+        buttons[3].setBounds(100, 50, 50, 50);
 
-        JButton button2 = new JButton("v");
-        button2.setBounds(50, 100, 50, 50);
-        panel.add(button2);
-
-        JButton button3 = new JButton("<");
-        button3.setBounds(0, 50, 50, 50);
-        panel.add(button3);
-
-        JButton button4 = new JButton(">");
-        button4.setBounds(100, 50, 50, 50);
-        panel.add(button4);
     }
 
 }
