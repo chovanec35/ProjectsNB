@@ -7,7 +7,7 @@ import javax.swing.JPanel;
 public class MainFrame {  
 
     public void create() {
-        JFrame window = new JFrame("");
+        JFrame window = new JFrame("Aplication");
         window.setVisible(true);
         window.setSize(500, 500);
         window.setResizable(true);
