@@ -7,8 +7,8 @@ import javax.swing.JPanel;
 public class SimpleEx {
 
     public static void main(String[] args) {
-        MainFram frame = new MainFrame();
-
+        MainFrame frame = new MainFrame();
+        frame.create();
     }
 
 }
