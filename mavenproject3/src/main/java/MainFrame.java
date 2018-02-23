@@ -28,7 +28,7 @@ public class MainFrame {
         JPanel panel = new JPanel();
 //        panel.setBackground(Color.red);
         panel.setLayout(null);
-        panel.setBounds(0, 0, 100, 101);
+        panel.setBounds(0, 0, 100, 100);
         window.add(panel);
         panel.add(l);
 
@@ -49,6 +49,7 @@ public class MainFrame {
             @Override
             public void actionPerformed(java.awt.event.ActionEvent e) {
                 System.out.println("naaajs");
+                l.setBounds(200, 200, 210,200);
                 
             }
         });
