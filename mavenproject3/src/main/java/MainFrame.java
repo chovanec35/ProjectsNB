@@ -1,6 +1,7 @@
 
 import java.awt.Color;
 import java.awt.Label;
+import java.awt.Point;
 import java.awt.event.ActionListener;
 import java.awt.event.*;
 import javafx.event.ActionEvent;
@@ -19,8 +20,8 @@ public class MainFrame {
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         JLabel l = new JLabel();
-        l.setSize(350,100);
-        l.setBounds(200, 200, 200,200);
+        l.setSize(350, 100);
+        l.setBounds(200, 200, 200, 200);
         l.setText("Submit Button clicked.");
 //        l.setVisible(true);
         window.add(l);
@@ -45,13 +46,53 @@ public class MainFrame {
         buttons[2].setBounds(0, 50, 50, 50);
         buttons[3].setBounds(100, 50, 50, 50);
 
+        //move up
         buttons[0].addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(java.awt.event.ActionEvent e) {
-                System.out.println("naaajs");
-                l.setBounds(200, 200, 210,200);
+                Point point = l.getLocation();
+                int x = point.x;
+                int y = point.y;
                 
+                l.setLocation(x, y-5);
             }
         });
+        
+        //move down
+        buttons[1].addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(java.awt.event.ActionEvent e) {
+                Point point = l.getLocation();
+                int x = point.x;
+                int y = point.y;
+                
+                l.setLocation(x, y+5);
+            }
+        });
+        
+        //move left
+        buttons[2].addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(java.awt.event.ActionEvent e) {
+                Point point = l.getLocation();
+                int x = point.x;
+                int y = point.y;
+                
+                l.setLocation(x-5, y);
+            }
+        });
+        
+        //move right
+        buttons[3].addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(java.awt.event.ActionEvent e) {
+                Point point = l.getLocation();
+                int x = point.x;
+                int y = point.y;
+                
+                l.setLocation(x+5, y);
+            }
+        });
+
     }
 }
